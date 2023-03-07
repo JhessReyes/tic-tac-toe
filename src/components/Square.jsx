@@ -1,30 +1,13 @@
-function Square ({value}){
-    return (
-    <button className="square">
-        {value}
+import React from "react";
+
+function Square({ value, onClick }) {
+  return (
+    <button
+      className="border border-4 px-2 py-2 border-primary  text-6xl"
+      onClick={onClick}>
+      {value}
     </button>
-    )
+  );
 }
 
-function Board(){
-
-    return(
-        <div className="board">
-            <Square value={'X'}/>
-            <Square value={'O'}/>
-            <Square value={'X'}/>
-            <Square value={'O'}/>
-            <Square value={'X'}/>
-            <Square value={'O'}/>
-            <Square value={'X'}/>
-            <Square value={'O'}/>
-            <Square value={'X'}/>
-
-        </div>
-    )
-}
-
-ReactDOM.render(
-    <Square/>,
-    document.getElementById('root')
-)
+export default Square;

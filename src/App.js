@@ -1,54 +1,31 @@
+import { useState } from "react";
 import "./App.css";
-let a = "Hola Mundo";
-
-function Square ({value}){
-  return (
-  <button className="square">
-      {value}
-  </button>
-  )
-}
-
-function Board(){
-
-  return(
-      <div className="board">
-        <div className="board-row">
-        <Square value={'X'}/>
-          <Square value={'O'}/>
-          <Square value={'X'}/>
-        </div>
-          
-          <div className="board-row ">
-          <Square value={'O'}/>
-          <Square value={'X'}/>
-          <Square value={'O'}/>
-          </div>
-          
-          <div className="board-row">
-          <Square value={'X'}/>
-          <Square value={'O'}/>
-          <Square value={'X'}/>
-          </div>
-         
-
-      </div>
-  )
-}
+import Board from "./components/Board";
 
 function App() {
+  const [board, setBoard] = useState([
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+  ]);
+  const Defboard = ["X", "O", "X", "X", "O", "X", "X", "O", "X"];
+
+  const handleClick = (i) => {
+    console.log(i);
+  };
+
   return (
     <div className="App">
-      <h1 className="btn btn-ghost">Tic Tac Toe</h1>
-      <h1 className="text-3xl font-bold underline">{a}</h1>
-      <Board/>
+      <h1 className="btn btn-ghost text-5xl my-10">Tic Tac Toe</h1>
+      <Board square={Defboard} onClick={handleClick} />
     </div>
-    
-    
   );
-  
 }
-
-
 
 export default App;
