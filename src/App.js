@@ -22,7 +22,9 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="btn btn-ghost text-5xl my-10">Tic Tac Toe</h1>
+      <h1 className="title-game">
+        Tic Tac Toe
+      </h1>
       <Board square={Defboard} onClick={handleClick} />
     </div>
   );
