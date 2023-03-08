@@ -22,13 +22,13 @@ code {
     @apply rounded-lg border-8 border-t border-r border-l;
     @apply hover:bg-primary hover:text-accent hover:shadow-accent hover:shadow-lg;
     @apply active:shadow-accent active:shadow-xl active:translate-y-1;
-    @apply w-20 h-20 sm:w-40 sm:h-40 xl:w-56 xl:h-56;
+    @apply w-20 h-20 sm:w-40 sm:h-40 xl:w-48 xl:h-48;
     @apply text-4xl sm:text-6xl lg:text-6xl xl:text-8xl font-semibold;
   }
 
   .title-game {
     @apply shadow-lg font-bold bg-clip-text bg-gradient-to-r from-primary to-accent text-transparent;
-    @apply my-5 py-5 text-8xl;
+    @apply py-5 text-8xl;
     @apply text-4xl sm:text-6xl lg:text-6xl xl:text-8xl;
   }
 }
