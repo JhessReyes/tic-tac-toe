@@ -25,7 +25,7 @@ function App() {
       <h1 className="title-game bg-clip-text">
         Tic Tac Toe
       </h1>
-      <Board className="bg-black" square={Defboard} onClick={handleClick} />
+      <Board squares={board} onClick={handleClick} />
     </div>
   );
 }
