@@ -4,7 +4,7 @@ import Square from "./Square";
 function Board({ square, onClick }) {
   return (
     <>
-      <div className="">
+      <div className="flex items-center justify-center">
         <div className="flex-row">
           <Square value={square[0]} onClick={() => onClick(square[0])} />
           <Square value={square[1]} onClick={() => onClick(square[1])} />

@@ -14,7 +14,7 @@ function App() {
     null,
     null,
   ]);
-  const Defboard = ["X", "O", "X", "X", "O", "X", "X", "O", "X"];
+  const Defboard = ["", "X", "", "X", "O", "X", "X", "O", "X"];
 
   const handleClick = (i) => {
     console.log(i);
@@ -22,10 +22,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="title-game">
+      <h1 className="title-game bg-clip-text">
         Tic Tac Toe
       </h1>
-      <Board square={Defboard} onClick={handleClick} />
+      <Board className="bg-black" square={Defboard} onClick={handleClick} />
     </div>
   );
 }

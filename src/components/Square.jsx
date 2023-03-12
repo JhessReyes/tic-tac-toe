@@ -2,9 +2,9 @@ import React from "react";
 
 function Square({ value, onClick }) {
   return (
-    <button className="square" onClick={onClick}>
+    <div className="square flex items-center justify-center" onClick={onClick}>
       {value}
-    </button>
+    </div>
   );
 }
 
