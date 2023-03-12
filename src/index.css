@@ -17,7 +17,7 @@ code {
 
 @layer components {
   .square {
-    @apply border-primary items-center bg-white text-primary uppercase m-4 p-1.5 cursor-pointer;
+    @apply border-primary items-center bg-white text-primary uppercase m-2 p-1 cursor-pointer;
     @apply shadow-inner top-0 relative;
     @apply rounded-lg border-8 border-t border-r border-l;
     @apply hover:bg-primary hover:text-accent hover:shadow-accent hover:shadow-lg;
@@ -27,7 +27,7 @@ code {
   }
 
   .title-game {
-    @apply shadow-lg font-bold bg-clip-text bg-gradient-to-r from-primary to-accent text-transparent;
+    @apply shadow-lg hover:bg-clip-padding hover:text-white font-bold bg-clip-text bg-gradient-to-r from-primary to-accent text-transparent;
     @apply py-5 text-8xl;
     @apply text-4xl sm:text-6xl lg:text-6xl xl:text-8xl;
   }
