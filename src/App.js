@@ -1,13 +1,12 @@
 import { useState } from "react";
 import "./App.css";
 import Board from "./components/Board";
+import { verifyWinner } from "./components/Game/+Game.ts";
 import Game from "./components/Game/Game.jsx";
-import verifyWinner from "./components/Game/+Game.ts";
 
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xisNext, setXisNext] = useState(true);
-  let Defboard = ["", "X", "", "X", "O", "X", "X", "O", "X"];
   let turn = xisNext ? "X" : "O";
 
   const handleClick = (i) => {
@@ -18,7 +17,14 @@ function App() {
     copyBoard[i] = xisNext ? "X" : "O";
     setBoard(copyBoard);
     setXisNext(!xisNext);
-    console.log(copyBoard);
+
+    if (xisNext) {
+      const copyBoard0 = copyBoard.slice();
+      copyBoard0[0] = !xisNext ? "X" : "O";
+      console.log(copyBoard0);
+      setBoard(copyBoard0);
+      setXisNext(xisNext);
+    }
   };
 
   return (

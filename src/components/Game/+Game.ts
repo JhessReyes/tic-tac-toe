@@ -1,4 +1,4 @@
-export default function verifyWinner(board) {
+export function verifyWinner(board) {
   //winnig cases
   const cases = [
     [0, 1, 2],
@@ -19,3 +19,9 @@ export default function verifyWinner(board) {
   }
   return null;
 }
+
+export function assdaf() {
+  return;
+}
+
+export default { assdaf, verifyWinner };
