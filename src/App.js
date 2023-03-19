@@ -16,6 +16,7 @@ function App() {
       handleClick(bestMove);
     }
     verifyWinner(board) && winner(verifyWinner(board));
+    if (board.filter((e) => e === null).length === 0) tier();
   }, [board]);
 
   function winner(player) {
@@ -31,6 +32,18 @@ function App() {
         left top
         no-repeat
       `,
+    });
+  }
+
+  function tier() {
+    return Swal.fire({
+      title: "Empate :(",
+      width: 600,
+      padding: "3em",
+      color: "#716add",
+      imageUrl: "embeces.jpg",
+      imageWidth: 400,
+      imageHeight: 400,
     });
   }
   const handleClick = (i) => {
