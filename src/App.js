@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Board from "./components/Board";
-
+//Hola Sam
 function App() {
   const [board, setBoard] = useState([
     null,
