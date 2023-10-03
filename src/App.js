@@ -4,7 +4,7 @@ import Board from "./components/Board";
 import { verifyWinner } from "./components/Game/+Game.ts";
 import Game from "./components/Game/Game.jsx";
 import Swal from "sweetalert2";
-
+// hola sam
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [xisNext, setXisNext] = useState(true);
